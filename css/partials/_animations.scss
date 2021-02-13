@@ -1,0 +1,59 @@
+.arc-reactor{
+    fill: transparent;
+    transition: .7s ease;
+
+    animation: arc-reactor 12s ease infinite alternate;
+
+}
+
+.logo{
+    transition: .3s ease;
+    transform-origin: center center;
+    transform-box: fill-box;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+@keyframes arc-reactor{
+    0%{
+        position: absolute;
+        left: -50%;
+        transform: rotate(0deg);
+    }
+    25%{
+        position: absolute;
+        left: 50%;
+        transform: rotate(720deg);
+    }
+    60%,100%{
+        transform: rotate(0deg);
+    }
+}
+
+.line1{
+    animation: line 7s ease infinite alternate;
+}
+
+.line2{
+    animation: line 4s ease .7s infinite alternate;
+}
+
+.line3{
+    animation: line 6s ease 2s infinite alternate;
+}
+
+.line4{
+    animation: line 5s ease infinite alternate;
+}
+
+@keyframes line{
+    0%{
+        stroke-dasharray: 200 50;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 500 5;
+        stroke-dashoffset: 1000;
+    }
+}
